@@ -14,7 +14,7 @@ while(True):
 	print data['query'] + ' - ' + data['city'] + ' - ' + data['org'] + ' - ' + data['as']
 
 	if data['city'] == city:
-		with open('bh_ips.txt', 'a') as ipsFile:
+		with open('ips.txt', 'a') as ipsFile:
 			ipsFile.write(ip)
 
 	ip = iptools.ipv4.ip2long(ip) + 1
