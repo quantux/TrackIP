@@ -11,7 +11,7 @@ while(True):
 	response = urllib2.urlopen('http://ip-api.com/json/' + ip)
 	data = json.load(response)
 
-	print data['query'] + ' - ' + data['city'] + ' - ' + data['org'] + ' - ' + data['as']
+	print data['query'] + ' - City: ' + data['city'] + ' - Provider: ' + data['org'] + ' - Company: ' + data['as']
 
 	if data['city'] == city:
 		with open('ips.txt', 'a') as ipsFile:
@@ -22,3 +22,4 @@ while(True):
 
 # Usage: sudo pip install iptools
 # python trackip.py ip city
+# Example: python trackip.py 11.12.13.14 'Los Angeles'
